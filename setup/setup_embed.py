@@ -42,6 +42,7 @@ class ProductReview(TableModel, table=True):
     customer_id: str = Field()
     rating: int = Field()
     product_name: str = Field()
+    # product_name: str = FullTextField()
     review_content: str = Field(sa_type=Text)
     review_content_vec: list[float] = text_embed.VectorField(
         source_field="review_content"
@@ -114,6 +115,6 @@ if cs_table.rows() == 0:
 list1 = pr_table.search("ZenPhone").limit(3).to_list()
 
 list2 = cs_table.search("ZenPhone").limit(3).to_list()
-
+# list1 = pr_table.search("ZenPhone", search_type="hybrid").text_column("product_name").limit(3).to_list()
 print("list1:", list1)
 print("list2:", list2)
