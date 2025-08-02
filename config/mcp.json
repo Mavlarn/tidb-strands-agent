@@ -1,0 +1,22 @@
+{
+    "mcpServers": {
+        "awsdoc": {
+            "command": "uvx",
+            "args": [
+                "awslabs.aws-documentation-mcp-server@latest"
+            ],
+            "env": {
+                "FASTMCP_LOG_LEVEL": "ERROR"
+            }
+        },
+        "Snowflake Cortext Agent MCP": {
+            "command": "uv",
+            "args": [
+                "--directory", "/home/ubuntu/snowflake_ws/mttidb-strands-agent", "run", "-m", "pytidb.ext.mcp"
+            ],
+            "env": {
+                "FASTMCP_LOG_LEVEL": "DEBUG"
+            }
+        }
+    }
+}

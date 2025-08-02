@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.vscode
+.amazonq/
+uv.lock
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+chat_history/*.yaml
+!chat_history
