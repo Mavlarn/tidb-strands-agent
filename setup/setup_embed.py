@@ -1,6 +1,5 @@
 import os
 
-from typing import Optional, Any
 from pytidb import TiDBClient
 from pytidb.schema import TableModel, Field, FullTextField
 from pytidb.embeddings import EmbeddingFunction
@@ -108,13 +107,10 @@ if cs_table.rows() == 0:
     cs_table.bulk_insert(cs_list)
     print("customer service records data inserted.")
 
-# data_list = [ProductReview(**review) for review in reviews_data]
-# pr_table.bulk_insert(data_list)
-
 
 list1 = pr_table.search("ZenPhone").limit(3).to_list()
+print("list1:", list1)
 
 list2 = cs_table.search("ZenPhone").limit(3).to_list()
 # list1 = pr_table.search("ZenPhone", search_type="hybrid").text_column("product_name").limit(3).to_list()
-print("list1:", list1)
 print("list2:", list2)
