@@ -7,6 +7,13 @@
             "cache_support": [],
             "image_support": false
         },
+        "us.amazon.nova-pro-v1:0": {
+            "cache_support": [
+                "system",
+                "messages"
+            ],
+            "image_support": true
+        },
         "us.anthropic.claude-3-7-sonnet-20250219-v1:0": {
             "cache_support": [
                 "system",

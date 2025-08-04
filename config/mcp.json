@@ -3,7 +3,7 @@
         "Snowflake Cortext Agent MCP": {
             "command": "uv",
             "args": [
-                "--directory", "/home/ubuntu/snowflake_ws/mttidb-strands-agent", "run", "-m", "pytidb.ext.mcp"
+                "--directory", ".", "run", "-m", "pytidb.ext.mcp"
             ],
             "env": {
                 "FASTMCP_LOG_LEVEL": "DEBUG"
